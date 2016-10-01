@@ -1,7 +1,4 @@
 .legend {
-    border: 1px solid #999;
-    padding: 5px;
-    display: flex;
 }
 
 .legend-entry {
@@ -12,6 +9,7 @@
     padding: 5px;
     margin-bottom: 2px;
 }
+
 .legend-preferred { border-color: #4545ff; }
 .legend-accepted { border-color: #16a016; }
 .legend-experimental { border-color: #ada8a8; }

@@ -1,5 +1,19 @@
+import R from 'ramda';
 
-const parseRadar = text => {
+const concatIfExists = (prev, curr) => R.concat(prev, curr.tags ? curr.tags : []);
+
+export const parseTags = radarData => {
+    return R.pipe(
+        R.values,
+        R.flatten,
+        R.reduce(concatIfExists, []),
+        R.uniq,
+        R.sortBy(R.toLower),
+        R.map(t => ({ name: t, selected: false }))
+
+    )(radarData);
+};
+export const parseRadar = text => {
     const radarData = {};
 
     let currentCategory;
@@ -29,4 +43,3 @@ const parseRadar = text => {
     return radarData;
 }
 
-export { parseRadar }

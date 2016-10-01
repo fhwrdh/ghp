@@ -1,25 +1,49 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
 import App from './App';
-import { parseRadar } from './radarParser';
+import { parseRadar, parseTags } from './radarParser';
+import techRadarReducer from './reducers';
+import { getRadarData } from './api';
+import { setRadarData, setTags } from './actions';
 
 import './index.css';
 
-const render = (radarData, tags) => {
-    ReactDOM.render(
-      <App radar={radarData} tags={tags} />,
-      document.getElementById('root')
-    );
+/*
+store: {
+    tags: [
+        {
+            name: 'javascript'
+            selected: true
+        },
+        ...
+    ],
+    filterText: '',
+    radarData: {
+        ...
+    }
+}
+*/
+const store = createStore(
+    techRadarReducer,
+    window.devToolsExtension && window.devToolsExtension()
+);
+
+const loadRadarData = () => {
+    getRadarData((data) => {
+        const radarData = parseRadar(data);
+        store.dispatch(setRadarData(radarData));
+        store.dispatch(setTags(parseTags(radarData)));
+    });
 }
 
-fetch('radar.txt')
-    .then(response => {
-        return response.text();
-    })
-    .then(body => {
-        render(parseRadar(body));
-    });
-
-
-
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root'),
+    loadRadarData()
+);
 

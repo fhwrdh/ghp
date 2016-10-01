@@ -1,0 +1,20 @@
+.radar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.radar-category {
+    border: 0px solid #f0f0f0;
+    flex: 1;
+    margin: 10px;
+}
+.radar-category-title {
+    margin-bottom: 5px;
+    min-height: 2.5em;
+    /* border-bottom: 1px solid #00AF66; */
+    border-bottom: 1px solid #eee;
+}
+
+.radar-item {
+    padding: 5px;
+}

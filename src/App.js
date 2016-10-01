@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import logo from './new-cj-logo-icon.svg';
-import './App.css';
 import Legend from './Legend';
 import TagList from './TagList';
+import Radar from './Radar';
+
+import logo from './new-cj-logo-icon.svg';
+import './App.css';
 
 class App extends Component {
     render() {
-        console.log(this.props.radar);
         return (
             <div className="App">
                 <div className="App-header">
@@ -14,16 +15,18 @@ class App extends Component {
                     <span className="App-title">CJ Technology Radar</span>
                 </div>
                 <div className="App-body">
-                    <Legend />
-                    <TagList tags={this.props.tags} />
-
-
+                    <div className="App-sidebar">
+                        <Legend />
+                        <TagList />
+                    </div>
+                    <div className="App-content">
+                        <Radar />
+                    </div>
                 </div>
             </div>
         );
     }
 }
-
 
 export default App;
 

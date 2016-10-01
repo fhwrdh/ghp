@@ -1,0 +1,26 @@
+.tag {
+    border: 0px solid #ccc;
+    cursor: pointer;
+    margin: 3px;
+    padding: 3px;
+}
+
+.tag:hover {
+    background-color: #ccc;
+}
+.tag:active {
+    background-color: #ddd;
+}
+
+.tag-selected {
+    background-color: #444;
+    color: #eee;
+}
+
+.tag-selected:hover {
+    background-color: #999;
+    color: #000;
+}
+
+
+
