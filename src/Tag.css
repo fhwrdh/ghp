@@ -14,10 +14,10 @@
 }
 
 .tag:hover {
-    background-color: #ccc;
+    background-color: #ddd;
 }
 .tag:active {
-    background-color: #ddd;
+    background-color: #eee;
 }
 
 .tag-selected {
@@ -26,9 +26,11 @@
 }
 
 .tag-selected:hover {
-    background-color: #999;
-    color: #000;
+    background-color: #555;
 }
 
+.tag-selected:active {
+    background-color: #666;
+}
 
 
