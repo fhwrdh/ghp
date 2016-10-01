@@ -1,16 +1,63 @@
 import React from 'react';
 import R from 'ramda';
+import classnames from 'classnames';
+import Collapsible from 'react-collapsible';
 import { connect } from 'react-redux';
 
 import './Radar.css';
 
-const RadarItem = ({ name, status, tags, notes }) => {
-    let tagText = 'No tags';
-    if (tags) tagText = tags.join(' | ');
+const RadarItemTitle = ({ name, status, extraClass }) => {
+    const classes = {
+        'radar-item': true,
+        'radar-item-title': true
+    };
+    classes['border-'+status] = true;
+    if (extraClass) classes[extraClass] = true;
+
     return (
-        <div className={"radar-item border-" + status } title={tagText} >
-            { name }
+        <div className={classnames(classes)}>{name}</div>
+    );
+};
+
+const GutsSection = ({ title, body }) => {
+    return (
+        <div className="guts-section">
+            <div className="guts-section-title">{ title }</div>
+            <div className="guts-section-body">{ body }</div>
         </div>
+    );
+}
+const RadarItemTags = ({ tags }) =>
+    <GutsSection title="tags" body={ tags.join(', ')} />;
+
+const RadarItemNotes = ({ notes }) =>
+    <GutsSection title="notes" body={notes} />;
+
+const RadarItemGuts = ({ status, tags, notes }) => {
+    const classes = { 'radar-item-guts': true };
+    classes['border-'+status] = true;
+    classes['bg-'+status] = true;
+
+    if (!tags) tags = ['none'];
+    return (
+        <div className={classnames(classes)}>
+            { <RadarItemTags tags={tags} />}
+            { notes && <RadarItemNotes notes={notes} /> }
+        </div>
+    );
+}
+
+const RadarItem = ({name, status, tags, notes}) => {
+    const title = <RadarItemTitle name={name} status={status} />;
+    const titleOpened = <RadarItemTitle name={name} extraClass={"bg-" + status} status={status} />;
+
+    return (
+        <Collapsible
+            trigger={title}
+            triggerWhenOpen={titleOpened}
+            transitionTime={0}>
+            <RadarItemGuts name={name} status={status} tags={tags} notes={notes} />
+        </Collapsible>
     );
 };
 

@@ -98,6 +98,8 @@ pair programming
 
 one unit testing library per application
     status: preferred
+    tags: javascript, visualization
+    notes: TODO discuss moving this to preferred in December
 
 [Languages and Frameworks/Libraries]
 

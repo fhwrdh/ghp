@@ -18,10 +18,57 @@
 }
 
 .radar-item {
-    padding: 3px 5px;
+    padding: 5px 0px 5px 5px;
     border-width: 0px;
     border-left-width: 5px;
     border-style: solid;
-    margin-bottom: 0px;
-
 }
+
+.is-open .radar-item {
+    border-width: 0px;
+    border-left-width: 5px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+}
+
+.is-open .radar-item-title {
+    color: #eee;
+}
+.is-open .bg-preferred { background-color: rgba( 69,  69, 255, 1); }
+.is-open .bg-accepted { background-color: rgba( 22, 160,  22, 1); }
+.is-open .bg-experimental { background-color: rgba( 173, 168, 168, 1); }
+.is-open .bg-outoffavor { background-color: rgba( 255, 77, 77, 1); }
+
+.radar-item-title {
+    user-select: none;
+    cursor: pointer;
+}
+
+.radar-item-title:hover {
+}
+
+.radar-item-guts {
+    padding: 5px;
+    background-color: #fff;
+    border-width: 0px;
+    border-left-width: 5px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+}
+
+.guts-section {
+    padding-bottom: 6px;
+}
+
+.guts-section-title {
+    font-variant: small-caps;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.guts-section-body {
+    font-size: .8em;
+}
+
