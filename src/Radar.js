@@ -8,7 +8,7 @@ const RadarItem = ({ name, status, tags, notes }) => {
     let tagText = 'No tags';
     if (tags) tagText = tags.join(' | ');
     return (
-        <div className={"radar-item " + status } title={tagText} >
+        <div className={"radar-item border-" + status } title={tagText} >
             { name }
         </div>
     );

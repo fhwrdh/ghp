@@ -4,17 +4,25 @@
 }
 
 .radar-category {
-    border: 0px solid #f0f0f0;
+    border: 0px solid #ddd;
     flex: 1;
-    margin: 10px;
+    margin: 5px;
+    padding: 10px;
 }
 .radar-category-title {
+    font-weight: 600;
+    padding-left: 8px;
     margin-bottom: 5px;
     min-height: 2.5em;
     /* border-bottom: 1px solid #00AF66; */
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
 }
 
 .radar-item {
-    padding: 5px;
+    padding: 3px 5px;
+    border-width: 0px;
+    border-left-width: 5px;
+    border-style: solid;
+    margin-bottom: 0px;
+
 }

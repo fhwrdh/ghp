@@ -4,14 +4,10 @@
 .legend-entry {
     display: flex;
     border-width: 0px;
-    border-left-width:10px;
+    border-left-width:5px;
     border-style: solid;
     padding: 5px;
     margin-bottom: 2px;
 }
 
-.legend-preferred { border-color: #4545ff; }
-.legend-accepted { border-color: #16a016; }
-.legend-experimental { border-color: #ada8a8; }
-.legend-outoffavor { border-color: #ff4d4d; }
 

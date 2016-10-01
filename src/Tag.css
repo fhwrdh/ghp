@@ -2,7 +2,7 @@
     border: 0px solid #ccc;
     cursor: pointer;
     margin: 3px;
-    padding: 3px;
+    padding: 3px 9px;
 }
 
 .tag:hover {
