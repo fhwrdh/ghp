@@ -1,8 +1,16 @@
+.taglist {
+    padding: 5px 5px;
+
+}
+.taglist-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
 .tag {
     border: 0px solid #ccc;
     cursor: pointer;
-    margin: 3px;
-    padding: 3px 9px;
+    padding: 3px 3px;
 }
 
 .tag:hover {

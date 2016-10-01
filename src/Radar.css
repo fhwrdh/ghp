@@ -9,13 +9,12 @@
     margin: 5px;
     padding: 10px;
 }
+
 .radar-category-title {
     font-weight: 600;
     padding-left: 8px;
     margin-bottom: 5px;
     min-height: 2.5em;
-    /* border-bottom: 1px solid #00AF66; */
-    /* border-bottom: 1px solid #eee; */
 }
 
 .radar-item {

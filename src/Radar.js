@@ -52,23 +52,35 @@ const Radar = ({ radarData }) => {
     );
 };
 
-const filterData = ({ radarData, tags }) => {
+const filterByTags = (radarData, tags) => {
     const selectedTagNames = tags
         .filter(t => t.selected)
         .map(t => t.name);
     if (selectedTagNames.length === 0) return radarData;
 
-    const filterItemsByTags = items => {
-        return items.filter((item) => {
-            return item.tags && R.any(tag => R.contains(tag, item.tags))(selectedTagNames);
-        });
-    }
+    const filterItemsByTags = items =>
+        items.filter((item) => item.tags && R.any(tag => R.contains(tag, item.tags))(selectedTagNames));
 
     return Object.keys(radarData).reduce((p, c) => {
         p[c] = filterItemsByTags(radarData[c]);
         return p;
     },
     {});
+}
+
+const filterByText = (data, filterText) => {
+    const matchText = items =>
+        items.filter(item => item.name.toLowerCase().indexOf(filterText) !== -1);
+
+    return Object.keys(data).reduce((p, c) => {
+        p[c] = matchText(data[c]);
+        return p;
+    },
+    {});
+}
+
+const filterData = ({ radarData, tags, filterText }) => {
+    return filterByText(filterByTags(radarData, tags), filterText);
 };
 
 const mapStateToProps = state => {

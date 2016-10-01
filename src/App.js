@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Legend from './Legend';
+// import Legend from './Legend';
 import TagList from './TagList';
 import Radar from './Radar';
+import Filter from './Filter';
 
 import logo from './new-cj-logo-icon.svg';
 import './App.css';
@@ -16,7 +17,7 @@ class App extends Component {
                 </div>
                 <div className="App-body">
                     <div className="App-sidebar">
-                        <Legend />
+                        <Filter />
                         <TagList />
                     </div>
                     <div className="App-content">

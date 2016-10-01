@@ -1,0 +1,14 @@
+.filter {
+    padding: 5px;
+}
+
+.filter-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.filter-input {
+    font-size: 13px;
+    width: 100%;
+    padding: 3px;
+}

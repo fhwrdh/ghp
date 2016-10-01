@@ -19,7 +19,8 @@ const Tag = ({ name, selected, onClick }) => {
 
 const TagList = ({ tags, onToggleTag }) => {
     return (
-        <div>
+        <div className="taglist">
+            <div className="taglist-title">Tags</div>
             {tags.map(t => <Tag key={t.name} {...t} onClick={onToggleTag} />)}
         </div>
     );
