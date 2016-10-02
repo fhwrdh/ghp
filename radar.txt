@@ -1,0 +1,667 @@
+[Techniques]
+cake pattern
+    status: outoffavor
+    notes: There are better ways to do "dependency injection".
+
+XML-RPC/SOAP
+    status: outoffavor
+    tags:network-api
+
+REST (RMM Level 1)
+    status: outoffavor
+    tags: REST, network-api
+
+REST (RMM Level 2)
+    status: accepted
+    tags: REST, network-api
+
+REST (RMM Level 3)
+    status: accepted
+    tags: REST, network-api
+
+JS Template Observer
+    status: outoffavor
+    tags: javascript
+
+"NaN style" JS Components
+    status: outoffavor
+    tags: javascript
+    notes: A style of component-oriented js UI development, introduced by team NaN.
+
+single responsibility principle
+    status: preferred
+
+"mockist" testing
+    status: accepted
+    tags: test
+
+fakes over mocks
+    status: accepted
+    tags: test
+
+configuration-as-a-service
+    status: accepted
+
+object-oriented programming
+    status: accepted
+    tags: oop
+
+functional
+    status: accepted
+
+machine learning
+    status: accepted
+
+promises over callbacks
+    status: accepted
+    tags: javascript
+
+branch-by-abstraction
+    status: accepted
+
+feature-flags
+    status: accepted
+
+async-io
+    status: accepted
+
+rdbms
+    status: accepted
+
+containerless
+    status: preferred
+    tags: jvm
+
+containers
+    status: outoffavor
+    tags: jvm
+
+design-by-contract
+    status: accepted
+
+automation
+    status: preferred
+
+continuous-delivery
+    status: preferred
+    tags: build
+
+TDD (test-first)
+    status: preferred
+    tags: test
+
+dependency injection over service locator
+    status: preferred
+
+pair programming
+    status: preferred
+
+one unit testing library per application
+    status: preferred
+    tags: javascript, visualization
+    notes: TODO discuss moving this to preferred in December
+
+[Languages and Frameworks/Libraries]
+
+d3-for-charting
+   status: outoffavor
+   tags: javascript, visualization
+
+jqplot
+   status: outoffavor
+   tags: javascript, visualization
+
+amcharts
+   status: preferred
+   tags: javascript, visualization
+
+spark
+   status: accepted
+   tags: hadoop, data-tier, jvm, scala, TODO
+   notes: TODO discuss moving this to preferred in December
+
+tcomb
+   status: outoffavor
+   tags: javascript
+   notes: lost interest
+
+XML (for REST representations)
+    status: outoffavor
+    tags: network-api, REST
+
+JSON (for REST representations)
+    status: preferred
+    tags: network-api, REST
+
+lunr
+    status: accepted
+    tags: javascript, full-text search
+
+mustache
+    status: outoffavor
+    tags: javascript
+
+squire
+    status: outoffavor
+    tags: javascript, test
+
+play
+    status: outoffavor
+    tags: jvm
+
+jsp
+    status: outoffavor
+    tags: templating, jvm
+
+ojb
+    status: outoffavor
+    tags: jvm, data-tier
+
+flex
+    status: outoffavor
+
+pl/sql
+    status: outoffavor
+    tags: languages, data-tier
+
+joyride js
+    status: outoffavor
+    tags: javascript
+
+sqoop-as-a-library
+    status: outoffavor
+
+hibernate-search
+    status: outoffavor
+    tags: jvm, data-tier
+
+raw lucene
+    status: outoffavor
+    tags: jvm, data-tier
+
+struts
+    status: outoffavor
+    tags: jvm
+
+xstream
+    status: outoffavor
+    tags: jvm
+
+xml
+    status: outoffavor
+
+pig
+    status: outoffavor
+    tags: jvm, languages, data-tier
+
+grails
+    status: outoffavor
+    tags: groovy
+    tags: jvm
+
+perl
+    status: outoffavor
+    tags: languages
+
+ruby
+    status: outoffavor
+    tags: languages
+
+haskell
+    status: accepted
+    tags: languages
+
+react
+    status: preferred
+    tags: javascript
+    notes: our default UI component technology
+
+finatra
+    status: outoffavor
+    tags: jvm
+    notes: finatra is getting too guicy.  prefer httpobjects instead.
+
+angular
+    status: outoffavor
+    tags: javascript
+
+clojure (for tooling)
+    status: accepted
+    tags: jvm, languages
+
+clojure
+    status: experimental
+    tags: jvm, languages
+    notes: [sponsor: insights]
+
+haskell (for tooling)
+    status: accepted
+    tags: languages
+
+intro.js
+    status: accepted
+    tags: javascript
+
+weka
+    status: accepted
+    tags: machine learning
+
+underscore (templating)
+    status: accepted
+    tags: javascript, templating
+
+underscore
+    status: accepted
+    tags: javascript
+
+bootstrap-css
+    status: accepted
+    tags: javascript
+
+handlebars
+    status: accepted
+    tags: templating, javascript
+
+java6
+    status: outoffavor
+    tags: jvm, languages
+    notes: java6 code & bytecode is acceptable where interoperability outside of CJ is a requirement
+
+backbone-models
+    status: accepted
+    tags: javascript
+
+backbone-router
+    status: accepted
+    tags: javascript
+
+backbone-views
+    status: outoffavor
+    tags: javascript
+
+sinon
+    status: accepted
+    tags: javascript, test
+
+restclient-js
+    status: accepted
+    tags: javascript, test
+
+httpobjects
+    status: accepted
+    tags: jvm
+
+hibernate
+    status: accepted
+    tags: jvm, data-tier
+
+velocity
+    status: accepted
+    tags: templating
+
+akka
+    status: accepted
+    tags: jvm
+
+scala
+    status: accepted
+    tags: jvm, languages
+
+javascript
+    status: accepted
+    tags: javascript, languages
+
+groovy (for-testing)
+    status: outoffavor
+    tags: test, groovy, jvm, languages
+
+groovy (for-production)
+    status: outoffavor
+    tags: groovy, jvm, languages
+
+spock
+    status: outoffavor
+    tags: test, groovy, jvm
+
+jmock
+    status: accepted
+    tags: test, jvm
+
+powermock
+    status: outoffavor
+    tags: test, jvm
+
+mockito
+    status: accepted
+    tags: test, jvm
+
+easymock
+    status: accepted
+    tags: test, jvm
+
+jetty-as-a-library
+    status: accepted
+    tags: jvm
+
+ObjectiveC
+    status: accepted
+    tags: languages
+
+mahout
+    status: accepted
+    tags: jvm, machine learning
+
+coffeescript
+    status: outoffavor
+    tags: javascript, languages
+
+yammer metrics
+    status: accepted
+    tags: jvm
+
+jsoup
+    status: accepted
+    tags: jvm
+
+eh-cache
+    status: accepted
+    tags: jvm
+
+java7
+    status: outoffavor
+    tags: jvm, languages
+    notes: java7 and earlier code & bytecode is acceptable where interoperability outside of CJ is a requirement
+
+java8
+    status: accepted
+    tags: jvm, languages
+
+hamcrest-matchers
+    status: accepted
+    tags: test, jvm
+
+junit
+    status: accepted
+    tags: test, jvm
+
+scalatest
+    status: accepted
+    tags: test, jvm
+
+jackson
+    status: accepted
+    tags: jvm
+
+lift-json
+    status: accepted
+    tags: jvm
+
+jquery-ui (datepickers)
+    status: outoffavor
+
+jquery-ui
+    status: outoffavor
+
+springmvc
+    status: accepted
+    tags: jvm
+
+spring (dependency-injection)
+    status: accepted
+    tags: jvm
+
+spring-security
+    status: accepted
+    tags: jvm
+
+python (for tooling)
+    status: accepted
+    tags: languages
+
+python (machine learning)
+    status: experimental
+    tags: languages
+
+R (machine learning)
+    status: experimental
+    tags: languages
+
+jquery (except for DOM-manipulation in production)
+    status: accepted
+    tags: javascript
+    note: use reactjs for production component dom manipulation
+
+qunit
+    status: accepted
+    tags: test, javascript
+
+require
+    status: preferred
+    tags: javascript, build
+
+[Tools]
+
+mochajs
+    status: accepted
+    tags: javascript, tools, build
+
+webpack
+    status: accepted
+    tags: javascript, bundler
+
+enzyme
+    status: accepted
+    tags: javascript, test
+
+gitlab
+    status: accepted
+    tags: scm
+
+gitblit
+    status: outoffavor
+    tags: scm
+
+splunk
+    status: accepted
+
+maven2
+    status: outoffavor
+    tags: build
+
+perforce
+    status: outoffavor
+    tags: scm
+
+stash
+    status: outoffavor
+    tags: scm
+
+gulp
+    status: accepted
+    tags: javascript, build
+
+bower
+    status: outoffavor
+    tags: javascript, build
+    notes: we're more interested in using npm
+
+selenium
+    status: accepted
+    tags: test
+
+docker
+    status: accepted
+
+vagrant
+    status: accepted
+
+github-for-open-source-project-hosting
+    status: accepted
+    tags: scm
+
+virtualBox
+    status: accepted
+
+graphite
+    status: accepted
+
+kibana
+    status: accepted
+
+taxi
+    status: accepted
+
+ansible
+    status: accepted
+
+configurator
+    status: accepted
+
+ganglia
+    status: accepted
+    tags: data-tier
+
+logstash
+    status: accepted
+
+warden
+    status: accepted
+
+jenkins - for CI
+    status: preferred
+    tags: build
+
+qunit-mojo
+    status: preferred
+    tags: test, javascript, build
+
+jshint
+    status: outoffavor
+    tags: test, javascript, build
+
+eslint
+    status: preferred
+    tags: lint, javascript
+
+nexus
+    status: preferred
+
+jaws
+    status: preferred
+
+maven3
+    status: preferred
+    tags: build
+
+simon
+    status: preferred
+
+speedyG for e2e execution in the CD pipeline
+    status: preferred
+    tags: test
+
+supervisor
+    status: preferred
+
+git
+    status: preferred
+    tags: scm
+
+kubernetes
+    status: experimental
+    tags: docker, cloud
+    notes: sponsored by ad systems
+
+[Platforms (and dbs)]
+
+kafka
+   status: accepted
+   tags: data-tier
+   notes: replaces flume, custom log transferring/consumption (e.g. consumelog), storing & transporting event streams
+
+kafka-rx
+   status: accepted
+   tags: data-tier, reactive
+   notes: http://github.com/cjdev/kafka-rx
+
+solr
+    status: outoffavor
+    tags: full-text search
+
+oracle text (aka context)
+    status: outoffavor
+    tags: full-text search
+
+mysql
+    status: outoffavor
+
+hadoop map-reduce v1
+    status: outoffavor
+    tags: jvm, data-tier
+
+appworx
+    status: outoffavor
+
+J2EE (incl. EJB, JNDI, JMS, ServletAPI)
+    status: outoffavor
+    tags: jvm
+
+activemq
+    status: outoffavor
+    tags: jvm
+
+fiorano
+    status: outoffavor
+    tags: jvm
+
+resin
+    status: outoffavor
+    tags: jvm
+
+hadoop map-reduce v2 ("yarn")
+    status: outoffavor
+    tags: data-tier
+    notes: deprecated in favor of spark
+
+oracle
+    status: accepted
+    tags: data-tier
+
+mongo
+    status: accepted
+    tags: data-tier
+
+cassandra
+    status: accepted
+    tags: data-tier
+
+hdfs
+    status: accepted
+    tags: data-tier
+
+hadoop - for distributed map/reduce
+    status: outoffavor
+    tags: data-tier
+    notes: deprecated in favor of spark
+
+flume
+    status: outoffavor
+    tags: data-tier
+
+kestrel
+    status: accepted
+
+nodejs - for tools
+    status: accepted
+    tags: javascript
+
+zookeeper
+    status: accepted
+
+elastic search - for full-text indexing
+    status: preferred
+    tags:data-tier,full-text search
+
+jvm - for production applications
+    status: preferred
+    tags: jvm, languages
