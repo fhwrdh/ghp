@@ -1,6 +1,7 @@
 .legend {
     position: absolute;
     top: 52px;
+    right:0;
     width: 370px;
     color: #000;
     background-color: #fcfcfc;
