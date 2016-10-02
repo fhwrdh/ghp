@@ -19,9 +19,7 @@ const Filter = ({ onFilterChange }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFilterChange: (filterText) => {
-            dispatch(updateFilter(filterText));
-        }
+        onFilterChange: (filterText) => dispatch(updateFilter(filterText))
     }
 }
 
@@ -29,3 +27,4 @@ export default connect(
     null,
     mapDispatchToProps
 )(Filter);
+

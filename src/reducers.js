@@ -1,5 +1,12 @@
 import { combineReducers } from 'redux';
-import { TOGGLE_TAG, UPDATE_FILTER, SET_RADAR_DATA, SET_TAGS, TOGGLE_LEGEND } from './actions';
+import {
+    TOGGLE_TAG,
+    UPDATE_FILTER,
+    SET_RADAR_DATA,
+    SET_TAGS,
+    TOGGLE_LEGEND,
+    UPDATE_STATUS_FILTER
+} from './actions';
 
 const radarData = (state = {}, action) => {
     switch(action.type) {
@@ -39,10 +46,20 @@ const legendVisible = (state = false, action) => {
     }
 }
 
+const statusFilter = (state = '', action) => {
+    switch(action.type) {
+        case UPDATE_STATUS_FILTER:
+            if (state === action.statusFilter) return '';
+            return action.statusFilter;
+        default: return state;
+    }
+}
+
 export default combineReducers({
     filterText,
     tags,
     radarData,
-    legendVisible
+    legendVisible,
+    statusFilter
 });
 

@@ -125,9 +125,22 @@ const filterByText = (data, filterText) => {
     },
     {});
 }
+const filterByStatus = (data, statusFilter) => {
+    console.log('filter:', statusFilter);
+    if (!statusFilter) return data;
 
-const filterData = ({ radarData, tags, filterText }) => {
-    return filterByText(filterByTags(radarData, tags), filterText);
+    const matchStatusFilter = items =>
+        items.filter(item => item.status.toLowerCase() === statusFilter);
+
+    return Object.keys(data).reduce((p, c) => {
+        p[c] = matchStatusFilter(data[c]);
+        return p;
+    },
+    {});
+}
+
+const filterData = ({ radarData, tags, filterText, statusFilter }) => {
+    return filterByStatus( filterByText( filterByTags(radarData, tags), filterText), statusFilter);
 };
 
 const mapStateToProps = state => {

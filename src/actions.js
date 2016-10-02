@@ -3,6 +3,7 @@ export const SET_RADAR_DATA = 'SET_RADAR_DATA';
 export const TOGGLE_TAG = 'TOGGLE_TAG';
 export const UPDATE_FILTER = 'UPDATE_FILTER';
 export const TOGGLE_LEGEND = 'TOGGLE_LEGEND';
+export const UPDATE_STATUS_FILTER = 'UPDATE_STATUS_FILTER';
 
 export function setRadarData(radarData) {
     return { type: SET_RADAR_DATA, radarData }
@@ -24,3 +25,6 @@ export function toggleLegend() {
     return { type: TOGGLE_LEGEND };
 }
 
+export const updateStatusFilter = (statusFilter) => {
+    return { type: UPDATE_STATUS_FILTER, statusFilter };
+};
