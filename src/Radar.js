@@ -19,7 +19,7 @@ const RadarItemTitle = ({ name, status, extraClass }) => {
     );
 };
 
-const GutsSection = ({ title, body }) => {
+const RadarItemGutsSection = ({ title, body }) => {
     return (
         <div className="guts-section">
             <div className="guts-section-title">{ title }</div>
@@ -28,10 +28,10 @@ const GutsSection = ({ title, body }) => {
     );
 }
 const RadarItemTags = ({ tags }) =>
-    <GutsSection title="tags" body={ tags.join(', ')} />;
+    <RadarItemGutsSection title="tags" body={ tags.join(', ')} />;
 
 const RadarItemNotes = ({ notes }) =>
-    <GutsSection title="notes" body={notes} />;
+    <RadarItemGutsSection title="notes" body={notes} />;
 
 const RadarItemGuts = ({ status, tags, notes }) => {
     const classes = { 'radar-item-guts': true };

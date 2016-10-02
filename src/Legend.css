@@ -1,13 +1,12 @@
 .legend {
-}
-
-.legend-entry {
-    display: flex;
-    border-width: 0px;
-    border-left-width:5px;
-    border-style: solid;
+    position: absolute;
+    top: 52px;
+    width: 370px;
+    color: #000;
+    background-color: #fcfcfc;
+    border: 1px solid #ddd;
+    border-top-width: 0px;
     padding: 5px;
-    margin-bottom: 2px;
 }
 
 

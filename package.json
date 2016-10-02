@@ -10,6 +10,7 @@
     "@cjdev/visual-stack": "^0.7.6",
     "@cjdev/visual-stack-redux": "0.0.8",
     "classnames": "^2.2.5",
+    "font-awesome": "^4.6.3",
     "ramda": "^0.22.1",
     "react": "^15.3.2",
     "react-collapsible": "^1.1.0",

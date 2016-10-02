@@ -2,6 +2,7 @@ export const SET_TAGS = 'SET_TAGS';
 export const SET_RADAR_DATA = 'SET_RADAR_DATA';
 export const TOGGLE_TAG = 'TOGGLE_TAG';
 export const UPDATE_FILTER = 'UPDATE_FILTER';
+export const TOGGLE_LEGEND = 'TOGGLE_LEGEND';
 
 export function setRadarData(radarData) {
     return { type: SET_RADAR_DATA, radarData }
@@ -17,5 +18,9 @@ export function toggleTag(tagName) {
 
 export function updateFilter(filterText) {
     return { type: UPDATE_FILTER, filterText };
+}
+
+export function toggleLegend() {
+    return { type: TOGGLE_LEGEND };
 }
 

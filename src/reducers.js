@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { TOGGLE_TAG, UPDATE_FILTER, SET_RADAR_DATA, SET_TAGS } from './actions';
+import { TOGGLE_TAG, UPDATE_FILTER, SET_RADAR_DATA, SET_TAGS, TOGGLE_LEGEND } from './actions';
 
 const radarData = (state = {}, action) => {
     switch(action.type) {
@@ -31,9 +31,18 @@ const tags = (state = [], action) => {
     }
 };
 
+const legendVisible = (state = false, action) => {
+    switch(action.type) {
+        case TOGGLE_LEGEND:
+            return !state;
+        default: return state;
+    }
+}
+
 export default combineReducers({
     filterText,
     tags,
-    radarData
+    radarData,
+    legendVisible
 });
 

@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 // import Legend from './Legend';
+import Header from './Header';
 import TagList from './TagList';
 import Radar from './Radar';
 import Filter from './Filter';
-
-import logo from './new-cj-logo-icon.svg';
 import './App.css';
+import 'font-awesome/css/font-awesome.css';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <span className="App-title">CJ Technology Radar</span>
-                </div>
+                <Header />
                 <div className="App-body">
                     <div className="App-sidebar">
                         <Filter />
